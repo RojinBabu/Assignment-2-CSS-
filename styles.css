@@ -1,0 +1,115 @@
+/* Root element property */
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+  }
+  /* Main  */
+  main{
+    margin:0;
+    padding:0;
+    height:100vh;    /* 1vh is 1% of the viewport height */
+    background:url("C:\Users\rojin\Downloads\bgimg.jpg");    /* background image of tom cruise */
+    background-size:cover;        /* Background fills  */
+    background-repeat:no-repeat;    /* Restricting the background repeat */
+    display:flex;            /* Declaring flex and adjusting the contents as flex elements  */
+    justify-content:center;    /* distributes space between and around content items along the main-axis of a flex container */
+    align-items:center;
+    
+  }
+  .container{          /* Contains the main  */
+    position:relative;        /* we can move the object relative to its own position without affecting other elements */
+    top:0;
+    left:0;
+    width:80%;            /* width of container is 80% of main(parent) */
+    height:auto;        
+    font-family: 'Bai Jamjuree', sans-serif;     /* Using Google fonts */
+    border:4px solid rgba(0,0,0,0.5);           /* Border is slightly transparent rgba is used to control the opacity of color */
+    background:rgba(0,0,0,0.5);                 /* Background color of container is set to black and half the opacity */
+    border-radius:0.2em;                        /* corners of the border are rounded  */
+    backdrop-filter:blur(8px);                  /* It gives a filter and blur the backdrop of the element */
+  }
+  .flexcontent{          /* All elements including poster and text are adjusted here*/
+    display:flex;        /* flex container to adjust all container elements */
+    flex-direction:row;    
+    color:white;        /* Text color set to white */
+    transition:all 2s ease-in-out;    /* after hovering get backs to position in 2s  */
+  }
+  .flexcontent:hover{
+    transform:translate3d(-15px,15px,15px);    /* All elements get displaced from their position (x-axis,y-axis,z-axis) */
+    transition:all 2s ease-in-out;            /* hovering completes in 2s */
+  }
+  
+   #poster{               /* Oblivion Land Image  */
+    position:relative;    /* Poster is relative to flex-content */
+    width:50%;            /* 50% of flexcontent is givent to poster */
+  }
+  
+  #ptext{
+      position:absolute;    /* To place the text on poster we use absolute position  */
+      z-index:5;            /* z-index is increased so that is overlay on poster */
+      margin-left:3%;        /* margin is given to displace and adjust the text in center of poster */
+      padding-bottom:3%;        /* padding is given to provide some space at bottom */
+      top:0;
+      left:0;
+      height: 100%;    
+      color:#fff5b8;            /* color of text on poster is yellowish golden */
+      display:flex;                /* flex is used to separate the text and adjust them end to end */
+      flex-direction:column;        
+      justify-content: space-between;    /* Provide space in between the text */
+      align-items:center;                /* align the text in center of flex */
+      font-family: 'Sirin Stencil', sans-serif;    
+      text-align:center;            /* text is centered from the flex left side */
+  }
+  #ptext p:nth-child(1){        /* nth child is used to select same element tags we can also use n and operation can be performed on it  */
+      margin-top:1em;
+      letter-spacing:0.3em;        /* letter spacing is used to provide space between every letter */
+      word-spacing:1.2em;          /* word spacing is used to provide space between every word */
+      font-size:1vw;            
+  
+  }
+  #ptext div p:nth-child(1){        /* another div is declared in #ptext and it contains two p tags so nth child is used */
+      line-height:1.5em;            /* distance between lines */
+      letter-spacing:1em;            
+      font-size:2vw;
+  }
+  #ptext div p:nth-child(2){
+      margin-top:1em;                /* to give space between movie name and Diector producer names */
+      letter-spacing:0.5em;          
+      font-size:0.7vw;    
+  }
+  strong{
+      font-size:1em;                /* font-size related to id ptext div p:nth-child(2)(0.7vw==10.7px) thus 1em==10.7px */
+      font-weight: bold;            /* strong font is set to bold  */
+      color:white;                /* color is set to white on poster */
+  }
+  .minfo{                            /* Movie info properties (the text next to poster) */
+    margin:0;        
+    padding:2%;                       /* Provide padding from all sides */
+    display:flex;                    /* applying flex property to adjust text  */
+    flex-direction:column;            
+    justify-items:center;
+    align-items:center;
+    line-height:2em;                    /* space between each line */
+    text-align:justify;                    
+  }
+  .minfo h2{                             /* Oblivion heading */
+    font-family:'Sirin Stencil',sans-serif;
+    font-weight:normal;
+    font-size:3em; 
+    margin:5% 0;                           /* margin from top and bottom */
+  }
+  .minfo ul{                                /* Unordered list properties */
+    list-style-type:none;                    /* removing bullets */
+  }
+  .minfo a{                                        /* Link that takes user to imdb oblivion page */
+      padding:0 0.1em;
+      color:black;                        /* text color */
+      background-color: #e4cc6c;          /* Yellow Background color */
+      text-decoration:none;                 /* Removes the underline */
+      line-height:1.3em;                    
+      font-size:1em;
+      align-self: start;                        /* aligns a particular element in flex different from rest of the elements */
+      border-radius:0.3em;                   /* Rounded corners */
+      font-weight:bold;
+  }

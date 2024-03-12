@@ -1,0 +1,64 @@
+<!-- All HTML documents must start with a <!DOCTYPE> declaration. -->
+<!DOCTYPE html>
+<!-- The <html> tag represents the root of an HTML document.The <html> tag is the container for all other HTML elements -->
+<html lang="en">
+<!-- The <head> element is a container for metadata (data about data) and is placed between the <html> tag and the <body> tag -->
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <!--     Providing  the title of the page as Movie name-->
+    <title>OBLIVION</title>
+    <link href="styles.css" rel="stylesheet" type="text/css" >
+    <!--     Importing  font from Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@500&family=Sirin+Stencil&display=swap" rel="stylesheet">
+
+</head>
+<!-- Body tag starts -->
+<body>
+<!--     Main tag starts  -->
+  <main>
+<!--       Creating a div tag and giving it a class container in which the whole poster and its info is provided -->
+      <div class="container">
+          <div class="flexcontent">
+              <!--Movie name and other info that is displayed on movie poster-->
+              <div id="ptext" >
+                  <p>Earth Is A Memory Worth Fighting For</p>
+                <div>
+                    <p>TOM CRUISE <br>  OBLIVION</p>
+                    <p>FROM THE DIRECTOR OF <strong>TRON:LEGACY</strong><br>AND PRODUCER OF <strong>RISE OF THE PLANETS OF THE APES</strong>     
+                        <br>IN THEATERS AND <strong>IMAX</strong></p>
+                </div>
+              </div>
+        <!--Poster image in container class on output. Image is stores in images folder.-->
+        <img id="poster"  src="C:\Users\rojin\Downloads\oblivion_land.jpg" alt="Oblivion Land img" >
+        
+        <!--Movie Related Information near poster  -->
+        <div class="minfo">
+            <h2>OBLIVION</h2>    <!-- Movie name in h2 tag further size is increased in styles.css-->
+            <p>                <!-- Movie info starts here-->
+                In the year 2077, Jack Harper (Tom Cruise) works as a security repairman on an Earth left empty and devastated after a war with   
+                aliens. Jack has two weeks left before his mission ends and he joins his fellow survivors on a faraway colony. However, Jack's    
+                concept of reality comes crashing down after he rescues a beautiful stranger (Olga Kurylenko) from a downed spacecraft. The       
+                woman's arrival triggers a chain of events that culminates in Jack's nearly single-handed battle to save mankind.<br><br>
+            </p>
+                <ul>    <!-- More detail related to movie enclosed in unordered list -->
+                    <!-- li tag is used to list items-->
+                    <li>Directors : <em>Joseph Kosinski</em></li>    <!-- Using em(emphasis) tag to italicize-->
+                    <li>Starring : <em>Tom Cruise, Morgan Freeman, Olga Kurylenko</em></li>
+                    <li>Genres : <em>Science Fiction, Action, Adventure</em></li>
+                    <li>Language : <em>English</em></li>
+                    <li>Studio: <em>Universal Studios</em></li>
+                </ul>
+            <a href="https://www.imdb.com/title/tt1483013/" rel="external">IMDb</a>  <!-- Using Anchor tag  to jump to an external site IMDb  -->
+        </div>    <!--  div with minfo class ends here-->
+      </div>        <!-- div with flexcontent class ends here-->
+    </div>    <!-- div with container tag ends here-->
+    <!--    This script places a badge on your repl's full-browser view back to your repl's cover
+      page. Try various colors for the theme: dark, light, red, orange, yellow, lime, green,
+      teal, blue, blurple, magenta, pink!  -->
+    </main>    <!-- main tag ends here-->
+</body>    <!-- body tag ends here-->
+
+</html>
